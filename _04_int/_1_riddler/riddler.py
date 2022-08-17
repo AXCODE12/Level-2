@@ -1,6 +1,6 @@
 from tkinter import messagebox, simpledialog, Tk
 Hi = Tk()
-Hi.withdrawal()
+Hi.withdraw()
 """
 
 * Write a python program that asks the user a minimum of 3 riddles.
@@ -15,4 +15,21 @@ Hi.withdrawal()
 * After all the riddles have been asked, tell the user how many they got
   correct
 """
-rid = simpledialog.askstring('q','')
+rid1 = simpledialog.askstring('q','What has a head and tail but no body?')
+rid2 = simpledialog.askstring('q','What has rings but no fingers?')
+rid3 = simpledialog.askstring('q','What can run but can''t walk?')
+score = 0
+if rid1 == 'coin':
+    score += 1
+else:
+    messagebox.showinfo('W','Wrong')
+if rid2 == 'telephone':
+    score += 1
+else:
+    messagebox.showinfo('W','Wrong')
+if rid3 == 'river':
+    score += 1
+else:
+    messagebox.showinfo('W','Wrong')
+
+messagebox.showinfo('score',score)
